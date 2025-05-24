@@ -26,7 +26,7 @@ This is a simple Flask API that lets you send in transaction info and it tells y
 2. add data_sources to securebank folder
 
 3. Open a Powershell terminal  
-   Navigate to the `securebank` folder. 
+   Navigate to the `Enabled-AI-Securbank` folder. 
 
    #### powershell commands: 
     4) cd your_file_path\Enabled-AI-Securebank"
