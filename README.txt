@@ -1,9 +1,9 @@
-# SecureBank Fraud Detection API
+# SecureBank fraud detection exercise
 
 This is a simple Flask API that lets you send in transaction info and it tells you if it's probably fraud. It's built in Python and runs in Docker, which just means it works the same no matter where you run it.
 
 
-## What This Project Does
+## What this code does
 
 - Loads a little fake model that randomly says "fraud" or "not fraud" (Model implementation in future iterations)
 - Takes in transaction data as JSON (you send it via curl)
@@ -11,20 +11,25 @@ This is a simple Flask API that lets you send in transaction info and it tells y
 - Runs in a Docker container so you don't need to mess with local installs
 
 
-## What You Need
+## What you need
 
-- Python files and a `test.json` file (already included)
+- Python files 
 - Docker Desktop installed and running
 - Terminal access (PowerShell or Command Prompt works)
+- this does not include the data_sources folder, that needs to be added in the directory
 
 
-## How to Run It (Quick Start)
+## How to run it
 
-1. **Open a terminal**  
+1. Download content
+
+2. add data_sources to securebank folder
+
+3. **Open a terminal**  
    Navigate to the `securebank` folder. You can paste this in if you're in PowerShell:
 
-   ```powershell
-    1) cd "G:\Documents G\Hopkins\AI enabled systems\securebank"
+   ```powershell commands
+    1) cd your_file_path\securebank"
 
     2) docker build -t securebank-app .
 
@@ -33,3 +38,4 @@ This is a simple Flask API that lets you send in transaction info and it tells y
 
     4) cmd /c curl -X POST http://localhost:5000/predict/ -H "Content-Type: application/json" --data-binary "@data_sources/test.json"
 	* output will be {'prediction': 1} or {'prediction': 0}
+
