@@ -25,17 +25,22 @@ This is a simple Flask API that lets you send in transaction info and it tells y
 
 2. add data_sources to securebank folder
 
-3. **Open a terminal**  
-   Navigate to the `securebank` folder. You can paste this in if you're in PowerShell:
+3. Open a Powershell terminal  
+   Navigate to the `securebank` folder. 
 
-   ```powershell commands
-    1) cd your_file_path\securebank"
+   #### powershell commands: 
+    4) cd your_file_path\Enabled-AI-Securebank"
 
-    2) docker build -t securebank-app .
+    5) docker build -t securebank-app .
 
-    3) docker run -p 5000:5000 securebank-app
+    6) docker run -p 5000:5000 securebank-app
 	* if it works it will say "Running on http://#####:5000"
 
-    4) cmd /c curl -X POST http://localhost:5000/predict/ -H "Content-Type: application/json" --data-binary "@data_sources/test.json"
+7.  Open a second Powershell terminal
+
+   #### powershell commands: 
+    8) cd your_file_path\Enabled-AI-Securebank"
+
+    9) cmd /c curl -X POST http://localhost:5000/predict/ -H "Content-Type: application/json" --data-binary "@data_sources/test.json"
 	* output will be {'prediction': 1} or {'prediction': 0}
 
